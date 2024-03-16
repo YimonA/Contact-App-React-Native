@@ -41,7 +41,7 @@ const modalVisibleHandler=()=>{
 </View>
 <View >
         <Button title="Add new contact" onPress={modalVisibleHandler}/>
-<ContactInput addContactHandler={addContactHandler} isVisible={isVisible} modalVisibleHandler={modalVisibleHandler}/>
+<ContactInput addContactHandler={addContactHandler} isVisible={isVisible} modalVisibleHandler={modalVisibleHandler} setIsVisible={setIsVisible}/>
         </View>
 </View>
   );

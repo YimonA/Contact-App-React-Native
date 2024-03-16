@@ -1,8 +1,9 @@
 import {useState} from "react"
 import { StyleSheet,Image,Button,TextInput, Text, View,Modal } from 'react-native'
 import React from 'react'
+const logoImg=require("../assets/logo.png");
 
-const ContactInput = ({addContactHandler,isVisible,modalVisibleHandler}) => {
+const ContactInput = ({addContactHandler,isVisible,modalVisibleHandler,setIsVisible}) => {
     const [nameInput,setNameInput]=useState("");
     const [phoneInput,setPhoneInput]=useState("");
 
@@ -26,9 +27,9 @@ modalVisibleHandler();
         }
 
   return (
-    <Modal visible={isVisible} animationType="slide">
+    <Modal visible={isVisible} animationType="slide" presentationStyle="pageSheet" onRequestClose={()=>setIsVisible(false)}>
         <View style={styles.inputContainer}>
-        <Image source={require("../assets/logo.png")} style={styles.imageContainer} />
+        <Image source={logoImg} style={styles.imageContainer} />
 <TextInput placeholder="Name..." style={styles.input} value={nameInput} onChangeText={nameInputHandler}/>
 <TextInput placeholder="Phone..."style={styles.input} value={phoneInput} onChangeText={phoneInputHandler}/>
 <View style={styles.buttonContainer}>
@@ -63,7 +64,7 @@ inputContainer:{
     width:"100%"
 //flexDirection:"row-reverse",
 
-  }
+  },
   imageContainer:{
     width:80,
     height:80,
