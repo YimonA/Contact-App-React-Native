@@ -31,7 +31,7 @@ modalVisibleHandler();
         <View style={styles.inputContainer}>
         <Image source={logoImg} style={styles.imageContainer} />
 <TextInput placeholder="Name..." style={styles.input} value={nameInput} onChangeText={nameInputHandler}/>
-<TextInput placeholder="Phone..."style={styles.input} value={phoneInput} onChangeText={phoneInputHandler}/>
+<TextInput placeholder="Phone..." style={styles.input} value={phoneInput} onChangeText={phoneInputHandler}/>
 <View style={styles.buttonContainer}>
 <Button title="Add Contact" onPress={onPressHandler}/>
 <Button title="Cancel" onPress={cancelHandler}/>
